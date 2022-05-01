@@ -43,10 +43,15 @@
                 </plugin>
                 <plugin>
                      <groupId>org.apache.maven.plugins</groupId>
-                     <artifactId>maven-war-plugin</artifactId>
-                     <version>3.3.1</version>
+                     <artifactId>maven-compiler-plugin</artifactId>
+                     <inherited>true</inherited>
+                     <version>3.8.1</version>
                      <configuration>
-                         <failOnMissingWebXml>false</failOnMissingWebXml>
+                         <source>16</source>
+                         <target>16</target>
+                         <compilerArguments>
+                             <endorseddirs>${endorsed.dir}</endorseddirs>
+                         </compilerArguments>
                      </configuration>
                 </plugin>
                 <plugin>
